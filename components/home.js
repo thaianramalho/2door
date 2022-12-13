@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Image } from 'react-native';
 import * as React from 'react';
-
 
 
 export default function Home() {
@@ -35,12 +35,34 @@ export default function Home() {
         position: 'absolute',
         left: 0,
         right: 0,
-        height: '15%',
+        height: '12%',
         bottom: 0,
         borderRadius: 40/2,
         borderColor: 'white'
       }}
     />
+<View style={styles.menuBar}>
+    <Image 
+        source={require('../img/homeIcon.png')} 
+        style={{flex: 1}}
+        />
+
+    <Image 
+        source={require('../img/menuBars.png')} 
+        style={{flex: 1}}
+        />
+
+    <Image 
+        source={require('../img/bellRing.png')} 
+        style={{flex: 1}}
+        />
+
+    <Image 
+        source={require('../img/profileIcon.png')}
+        style={{flex: 1}} 
+        />
+</View>
+
   </View>
   );
 }
@@ -56,5 +78,10 @@ const styles = StyleSheet.create({
     backgroundGradient: "vertical",
     backgroundGradientTop: "#333333",
     backgroundGradientBottom: "#666666"
+  },
+  menuBar:{
+    justifyContent:'space-between',
+    flex:1,
+    flexDirection:'row'
   }
 });
