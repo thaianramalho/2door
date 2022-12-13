@@ -13,7 +13,7 @@ export default function Home() {
       justifyContent: 'center',
       backgroundColor: 676767
     }}>
-        
+    
     <LinearGradient
       // Background Linear Gradient
       colors={['rgba(0,0,0,0.8)', 'black']}
@@ -41,6 +41,7 @@ export default function Home() {
         borderColor: 'white'
       }}
     />
+
 <View style={styles.menuBar}>
     <Image 
         source={require('../img/homeIcon.png')} 
@@ -81,7 +82,9 @@ const styles = StyleSheet.create({
   },
   menuBar:{
     justifyContent:'space-between',
-    flex:1,
-    flexDirection:'row'
+    // flex:1,
+    flexDirection:'row',
+    maxWidth:'40%',
+    bottom: 1
   }
 });
