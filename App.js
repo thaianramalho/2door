@@ -1,44 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import * as React from 'react';
-import { LinearGradient } from 'expo-linear-gradient';
+import Loading from './components/loading';
 
 export default function App() {
   return (
-    <View
-    style={{
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: 676767,
-      
-    }}>
-    <LinearGradient
-      // Background Linear Gradient
-      colors={['rgba(0,0,0,0.8)', 'black']}
-      start={{ x: 0 , y: 0.25 }}
-      style={{
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        height: '100%',
-      }}
-    />
-  </View>
+    <Loading></Loading>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  background:{
-    backgroundGradient: "vertical",
-    backgroundGradientTop: "#333333",
-    backgroundGradientBottom: "#666666"
-  }
-});
