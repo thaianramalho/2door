@@ -29,8 +29,8 @@ export default function Home() {
 
 <LinearGradient
       // Menu Linear Gradient
-      colors={['rgba(8D,8D,8D,8.4%)', 'rgba(218,218,218,113.72%)']}
-      start={{ x: 0.45 , y: 0.45 }}
+      colors={['rgba(141,141,141,0.9)', 'rgba(240,240,240,0.25)']}
+      start={{ x: 0.5 , y: 0.5 }}
       style={{
         position: 'absolute',
         left: 0,
