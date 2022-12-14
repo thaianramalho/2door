@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import * as React from 'react';
+import { Image } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
 
 
 export default function Home() {
@@ -24,6 +25,10 @@ export default function Home() {
             style={styles.menuLinearGradient}
         />
 
+        <Image 
+            source={require('../img/2door_logo.png')} 
+            style={{position:'absolute', top: 50, height:50, width: 50}}
+        />
 
         <SafeAreaView style={styles.menuBar}>
 
