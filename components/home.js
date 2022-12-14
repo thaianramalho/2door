@@ -26,31 +26,16 @@ export default function Home() {
 
 
         <SafeAreaView style={styles.menuBar}>
-            <TouchableOpacity onPress={() => console.log('Samir viadinho')}>
-                <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Paulo viadinho')}>
-                <FontAwesomeIcon icon={faBars} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Matheus viadinho')}>
-                <FontAwesomeIcon icon={faBell} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Iago viadinho')}>
-                <FontAwesomeIcon icon={faUser} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
+            <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
+            <FontAwesomeIcon icon={faBars} size={40} style={styles.iconesMenu} />
+            <FontAwesomeIcon icon={faBell} size={40} style={styles.iconesMenu} />
+            <FontAwesomeIcon icon={faUser} size={40} style={styles.iconesMenu} />
         </SafeAreaView>
 
     </View>
   );
 }
 
-
-// CSS AREA
-// CSS AREA
 const styles = StyleSheet.create({
 background:{
     backgroundGradient: "vertical",
@@ -73,16 +58,12 @@ background:{
 
   menuLinearGradient:{
     position: 'absolute',
-    left: -5,
-    right: -5,
-    height: '15%',
-    bottom: -25,
-    borderRadius: 25,
-    borderColor: 'white',
-    borderWidth: 1,
-    opacity: 1,
-    
-    
+    left: 0,
+    right: 0,
+    height: '12%',
+    bottom: 0,
+    borderRadius: 40/2,
+    borderColor: 'white'
   },
 
   backgroundLinearGradient:{
@@ -99,5 +80,5 @@ background:{
     justifyContent: 'center',
     backgroundColor: 676767
   },
-
+  
 });
