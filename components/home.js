@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -14,7 +14,7 @@ export default function Home() {
                 justifyContent: 'center',
                 backgroundColor: 676767
             }}>
-            
+        
             <LinearGradient
                 // Background Linear Gradient
                 colors={['rgba(0,0,0,0.8)', 'black']}
@@ -44,32 +44,31 @@ export default function Home() {
             />
 
 
-        <View style={styles.menuBar}>
-            <FontAwesomeIcon id='user' icon={faHouse} />
-            <FontAwesomeIcon id='menu' icon={faBars}  />
-            <FontAwesomeIcon id='bell' icon={faBell} />
-            <FontAwesomeIcon id='user' icon={faUser} />
-        </View>
+        <SafeAreaView style={styles.menuBar}>
+            <FontAwesomeIcon icon={faHouse} style={styles.iconesMenu} />
+            <FontAwesomeIcon icon={faBars} style={styles.iconesMenu} />
+            <FontAwesomeIcon icon={faBell} style={styles.iconesMenu} />
+            <FontAwesomeIcon icon={faUser} style={styles.iconesMenu} />
+        </SafeAreaView>
 
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  background:{
+background:{
     backgroundGradient: "vertical",
     backgroundGradientTop: "#333333",
     backgroundGradientBottom: "#666666"
   },
   menuBar:{
     justifyContent:'space-between',
-    // flex: 1,
+    position: 'absolute',
     flexDirection:'row',
+    bottom: 50
+  },
+  iconesMenu:{
+    height:50,
+    width:50
   }
 });
