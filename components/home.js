@@ -107,10 +107,10 @@ background:{
   },
   mainMenu:{
     position: 'absolute',
-    left: 30,
-    right: 30,
-    height: '65%',
-    bottom: 150,
+    left: '5%',
+    right: '5%',
+    bottom: '15%',
+    top: '15%',
     borderRadius: 16,
     borderColor: 'white',
     borderWidth: 1
