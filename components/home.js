@@ -25,6 +25,13 @@ export default function Home() {
             style={styles.menuLinearGradient}
         />
 
+        <LinearGradient
+            // Menu Principal (do meio onde exibe as coisas)
+            colors={['rgba(141,141,141,1)', 'rgba(218,218,218,0.4)']}
+            start={{ x: 0.1 , y: 0.5 }}
+            style={styles.mainMenu}
+        />
+
         <Image 
             source={require('../img/2door_logo.png')} 
             style={{position:'absolute', top: 50, height:50, width: 50}}
@@ -98,5 +105,14 @@ background:{
     justifyContent: 'center',
     backgroundColor: 676767
   },
-  
+  mainMenu:{
+    position: 'absolute',
+    left: 30,
+    right: 30,
+    height: '65%',
+    bottom: 150,
+    borderRadius: 16,
+    borderColor: 'white',
+    borderWidth: 1
+  }
 });
