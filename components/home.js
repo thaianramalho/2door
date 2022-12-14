@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import * as React from 'react';
+import { Image } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
-
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
 
 export default function Home() {
   return (
@@ -17,15 +17,20 @@ export default function Home() {
             style={styles.backgroundLinearGradient}
         />
 
-        <LinearGradient
-            // Menu Linear Gradient
-            colors={['rgba(141,141,141,0.9)', 'rgba(240,240,240,0.25)']}
-            start={{ x: 0.5 , y: 0.5 }}
-            style={styles.menuLinearGradient}
-        />
+            <LinearGradient
+                // Menu Linear Gradient
+                colors={['rgba(141,141,141,0.9)', 'rgba(240,240,240,0.25)']}
+                start={{ x: 0.5 , y: 0.5 }}
+                style={styles.menuLinearGradient}
+            />
 
+            <Image 
+            source={require('../img/2door_logo.png')}
+            style={{position:'absolute', top:50, width:50, height: 50}}
+            />  
 
         <SafeAreaView style={styles.menuBar}>
+
             <TouchableOpacity onPress={() => console.log('Samir viadinho')}>
                 <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
