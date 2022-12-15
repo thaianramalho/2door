@@ -44,7 +44,15 @@ export default function Home() {
           minFontSizeMultiplier={0.75}
           numberOfLines={1}
           style={styles.textoWelcome}>
-          WELCOME TO 2DOOR
+            WELCOME TO 2DOOR
+        </Text>
+
+        <Text 
+          maxFontSizeMultiplier={1.5}
+          minFontSizeMultiplier={0.75}
+          numberOfLines={1}
+          style={styles.textoComum}>
+            Não sei o que colocar no Welcome.
         </Text>
 
 
@@ -133,6 +141,13 @@ background:{
     top:'15.5%',
     fontSize: width / 15,
     fontWeight:'bold',
+    color: 'rgba(250,250,250,1)'
+  },
+  textoComum:{
+    position:'absolute',
+    textAlign:'center',
+    top:'25%',
+    fontSize: width / 20,
     color: 'rgba(250,250,250,1)'
   }
 });
