@@ -3,8 +3,9 @@ import { Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native';
 
+let width = Dimensions.get('window').width;
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
         <Text 
           maxFontSizeMultiplier={1.5}
           minFontSizeMultiplier={0.75}
-
+          numberOfLines={1}
           style={styles.textoWelcome}>
           WELCOME TO 2DOOR
         </Text>
@@ -130,7 +131,7 @@ background:{
     position:'absolute',
     textAlign:'center',
     top:'15.5%',
-    fontSize: 25,
+    fontSize: width / 15,
     fontWeight:'bold',
     color: 'rgba(250,250,250,1)'
   }
