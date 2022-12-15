@@ -7,7 +7,7 @@ import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Dimensions } fr
 
 let width = Dimensions.get('window').width;
 
-export default function Home() {
+export default function Menu() {
   return (
     <View
         style={styles.backgroundPrincipal}>
@@ -44,7 +44,7 @@ export default function Home() {
           minFontSizeMultiplier={0.75}
           numberOfLines={1}
           style={styles.textoWelcome}>
-            WELCOME TO 2DOOR
+            JOGOS DO DIA
         </Text>
 
         <Text 
@@ -52,18 +52,18 @@ export default function Home() {
           minFontSizeMultiplier={0.75}
           numberOfLines={1}
           style={styles.textoComum}>
-            Não sei o que colocar no Welcome.
+            abaixo os jogos
         </Text>
 
 
         <SafeAreaView style={styles.menuBar}>
 
             <TouchableOpacity onPress={() => console.log('Samir viadinho')}>
-                <FontAwesomeIcon icon={faHouse} size={40} style={[styles.iconesMenu, styles.iconSelected]} />
+                <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => console.log('Paulo viadinho')}>
-                <FontAwesomeIcon icon={faBars} size={40} style={styles.iconesMenu} />
+                <FontAwesomeIcon icon={faBars} size={40} style={[styles.iconesMenu, styles.iconSelected]} />
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => console.log('Matheus viadinho')}>
@@ -80,12 +80,6 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-background:{
-    backgroundGradient: "vertical",
-    backgroundGradientTop: "#333333",
-    backgroundGradientBottom: "#666666"
-  },
-
   menuBar:{
     position: 'absolute',
     flexDirection:'row',
