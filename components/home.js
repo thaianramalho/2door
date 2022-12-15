@@ -32,10 +32,20 @@ export default function Home() {
             style={styles.mainMenu}
         />
 
+
         <Image 
             source={require('../img/2door_logo.png')} 
             style={{position:'absolute', top: 50, height:50, width: 50}}
-        />
+            />
+      
+        <Text 
+          maxFontSizeMultiplier={1.5}
+          minFontSizeMultiplier={0.75}
+
+          style={styles.textoWelcome}>
+          WELCOME TO 2DOOR
+        </Text>
+
 
         <SafeAreaView style={styles.menuBar}>
 
@@ -70,7 +80,7 @@ background:{
   menuBar:{
     position: 'absolute',
     flexDirection:'row',
-    bottom: 40,
+    bottom: '4.5%',
   },
 
   iconesMenu:{
@@ -109,10 +119,19 @@ background:{
     position: 'absolute',
     left: '5%',
     right: '5%',
-    bottom: '15%',
-    top: '15%',
-    borderRadius: 16,
+    bottom: '14%',
+    top: '24%',
+    borderRadius: 10,
     borderColor: 'white',
-    borderWidth: 1
+    borderWidth: 1,
+    opacity: .4,
+  },
+  textoWelcome:{
+    position:'absolute',
+    textAlign:'center',
+    top:'15.5%',
+    fontSize: 25,
+    fontWeight:'bold',
+    color: 'rgba(250,250,250,1)'
   }
 });
