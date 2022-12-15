@@ -5,10 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native';
 
+
 let width = Dimensions.get('window').width;
 
-export default function Menu() {
-  return (
+const Menu = () => (
+
     <View
         style={styles.backgroundPrincipal}>
         
@@ -58,7 +59,7 @@ export default function Menu() {
 
         <SafeAreaView style={styles.menuBar}>
 
-            <TouchableOpacity onPress={() => console.log('Samir viadinho')}>
+            <TouchableOpacity onPress={() => navigation.navigate('home.js')}>
                 <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
 
@@ -76,8 +77,10 @@ export default function Menu() {
         </SafeAreaView>
 
     </View>
-  );
-}
+);
+
+export default Menu;
+
 
 const styles = StyleSheet.create({
   menuBar:{

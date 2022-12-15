@@ -4,8 +4,7 @@ import * as React from 'react';
 import { Image } from 'react-native';
 
 
-export default function Loading() {
-  return (
+const Loading = () => (
     <View
     style={{
       flex: 1,
@@ -37,7 +36,8 @@ export default function Loading() {
 
   </View>
   );
-}
+
+  export default Loading;
 
 const styles = StyleSheet.create({
   container: {

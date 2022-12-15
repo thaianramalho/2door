@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
 import { StyleSheet, View, SafeAreaView, TouchableOpacity } from 'react-native';
 
-export default function MenuBar() {
-  return (
+const MenuBar = () => (
     <View style={{flex: 1}}>
 
         <LinearGradient
@@ -36,7 +35,8 @@ export default function MenuBar() {
 
     </View>
   );
-}
+
+  export default MenuBar;
 
 const styles = StyleSheet.create({
   menuBar:{

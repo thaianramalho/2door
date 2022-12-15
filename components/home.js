@@ -7,8 +7,7 @@ import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Dimensions } fr
 
 let width = Dimensions.get('window').width;
 
-export default function Home() {
-  return (
+const Home = () => (
     <View
         style={styles.backgroundPrincipal}>
         
@@ -77,7 +76,8 @@ export default function Home() {
 
     </View>
   );
-}
+
+export default Home;
 
 const styles = StyleSheet.create({
 background:{
