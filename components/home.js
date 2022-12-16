@@ -19,13 +19,6 @@ const Home = () => (
         />
 
         <LinearGradient
-            // Menu Linear Gradient
-            colors={['rgba(141,141,141,0.9)', 'rgba(240,240,240,0.25)']}
-            start={{ x: 0.5 , y: 0.5 }}
-            style={styles.menuLinearGradient}
-        />
-
-        <LinearGradient
             // Menu Principal (do meio onde exibe as coisas)
             colors={['rgba(141,141,141,1)', 'rgba(218,218,218,0.4)']}
             start={{ x: 0.1 , y: 0.5 }}
@@ -53,26 +46,6 @@ const Home = () => (
           style={styles.textoComum}>
             Não sei o que colocar no Welcome.
         </Text>
-
-
-        <SafeAreaView style={styles.menuBar}>
-
-            <TouchableOpacity onPress={() => console.log('Samir viadinho')}>
-                <FontAwesomeIcon icon={faHouse} size={40} style={[styles.iconesMenu, styles.iconSelected]} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Paulo viadinho')}>
-                <FontAwesomeIcon icon={faBars} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Matheus viadinho')}>
-                <FontAwesomeIcon icon={faBell} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Iago viadinho')}>
-                <FontAwesomeIcon icon={faUser} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-        </SafeAreaView>
 
     </View>
   );
