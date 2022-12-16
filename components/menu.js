@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
+import BoxJogos from './boxJogos';
 
 
 let width = Dimensions.get('window').width;
@@ -25,7 +26,19 @@ const Menu = () => (
             colors={['rgba(141,141,141,1)', 'rgba(218,218,218,0.4)']}
             start={{ x: 0.1 , y: 0.5 }}
             style={styles.mainMenu}
-        />
+        >
+          <ScrollView>
+          <BoxJogos></BoxJogos>
+          <BoxJogos></BoxJogos>
+          <BoxJogos></BoxJogos>
+          <BoxJogos></BoxJogos>
+          <BoxJogos></BoxJogos>
+          <BoxJogos></BoxJogos>
+          <BoxJogos></BoxJogos>
+          <BoxJogos></BoxJogos>
+          
+          </ScrollView>
+        </LinearGradient>
 
  
         <Image 
@@ -40,15 +53,6 @@ const Menu = () => (
           style={styles.textoWelcome}>
             JOGOS DO DIA
         </Text>
-
-        <Text 
-          maxFontSizeMultiplier={1.5}
-          minFontSizeMultiplier={0.75}
-          numberOfLines={1}
-          style={styles.textoComum}>
-            Matheus viadinho2
-        </Text>
-
 
     </View>
 );
@@ -79,7 +83,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: '5%',
     right: '5%',
-    bottom: '14%',
+    bottom: '3%',
     top: '24%',
     borderRadius: 10,
     borderColor: 'white',
