@@ -1,16 +1,11 @@
 import * as React from 'react';
 import { Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import Home from './home';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
+
 
 let width = Dimensions.get('window').width;
 
-const Stack = createStackNavigator();
 
 
 const Menu = () => (
@@ -26,20 +21,13 @@ const Menu = () => (
         />
 
         <LinearGradient
-            // Menu Linear Gradient
-            colors={['rgba(141,141,141,0.9)', 'rgba(240,240,240,0.25)']}
-            start={{ x: 0.5 , y: 0.5 }}
-            style={styles.menuLinearGradient}
-        />
-
-        <LinearGradient
             // Menu Principal (do meio onde exibe as coisas)
             colors={['rgba(141,141,141,1)', 'rgba(218,218,218,0.4)']}
             start={{ x: 0.1 , y: 0.5 }}
             style={styles.mainMenu}
         />
 
-
+ 
         <Image 
             source={require('../img/2door_logo.png')} 
             style={{position:'absolute', top: 50, height:50, width: 50}}
@@ -58,29 +46,9 @@ const Menu = () => (
           minFontSizeMultiplier={0.75}
           numberOfLines={1}
           style={styles.textoComum}>
-            abaixo os jogos
+            Matheus viadinho2
         </Text>
 
-
-        <SafeAreaView style={styles.menuBar}>
-            
-            <TouchableOpacity title='Home' onPress={() => console.log('Home pressionado')}>
-                <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Menu pressionado')}>
-                <FontAwesomeIcon icon={faBars} size={40} style={[styles.iconesMenu, styles.iconSelected]} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Notificações pressionado')}>
-                <FontAwesomeIcon icon={faBell} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => console.log('Usuário pressionado')}>
-                <FontAwesomeIcon icon={faUser} size={40} style={styles.iconesMenu} />
-            </TouchableOpacity>
-
-        </SafeAreaView>
 
     </View>
 );
@@ -91,33 +59,6 @@ export default Menu;
 
 
 const styles = StyleSheet.create({
-  menuBar:{
-    position: 'absolute',
-    flexDirection:'row',
-    bottom: '4.5%',
-  },
-
-  iconesMenu:{
-    height:50,
-    width:50,
-    marginRight: 30,
-    marginLeft: 30
-  },
-
-  iconSelected:{
-    color: 'rgb(230,230,230)'
-  },
-
-  menuLinearGradient:{
-    position: 'absolute',
-    left: -5,
-    right: -5,
-    height: '15%',
-    bottom: -30,
-    borderRadius: 20,
-    borderColor: 'white',
-    borderWidth: 1
-  },
 
   backgroundLinearGradient:{
     position: 'absolute',
@@ -125,6 +66,7 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     height: '100%',
+    width: '100%'
   },
 
   backgroundPrincipal: {
