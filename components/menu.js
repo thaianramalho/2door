@@ -5,9 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator  } from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
+import Home from './home';
 
 let width = Dimensions.get('window').width;
+
+const Stack = createStackNavigator();
+
 
 const Menu = () => (
 
@@ -59,8 +63,8 @@ const Menu = () => (
 
 
         <SafeAreaView style={styles.menuBar}>
-
-            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            
+            <TouchableOpacity title='Home' onPress={() => console.log('Home pressionado')}>
                 <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
 
@@ -75,10 +79,12 @@ const Menu = () => (
             <TouchableOpacity onPress={() => console.log('Usuário pressionado')}>
                 <FontAwesomeIcon icon={faUser} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
+
         </SafeAreaView>
 
     </View>
 );
+
 
 
 export default Menu;
