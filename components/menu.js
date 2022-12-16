@@ -4,7 +4,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {faHouse, faUser, faBars, faBell} from '@fortawesome/free-solid-svg-icons';
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Dimensions } from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator  } from '@react-navigation/bottom-tabs';
 
 let width = Dimensions.get('window').width;
 
@@ -59,25 +60,26 @@ const Menu = () => (
 
         <SafeAreaView style={styles.menuBar}>
 
-            <TouchableOpacity onPress={() => navigation.navigate('home.js')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                 <FontAwesomeIcon icon={faHouse} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => console.log('Paulo viadinho')}>
+            <TouchableOpacity onPress={() => console.log('Menu pressionado')}>
                 <FontAwesomeIcon icon={faBars} size={40} style={[styles.iconesMenu, styles.iconSelected]} />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => console.log('Matheus viadinho')}>
+            <TouchableOpacity onPress={() => console.log('Notificações pressionado')}>
                 <FontAwesomeIcon icon={faBell} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => console.log('Iago viadinho')}>
+            <TouchableOpacity onPress={() => console.log('Usuário pressionado')}>
                 <FontAwesomeIcon icon={faUser} size={40} style={styles.iconesMenu} />
             </TouchableOpacity>
         </SafeAreaView>
 
     </View>
 );
+
 
 export default Menu;
 
